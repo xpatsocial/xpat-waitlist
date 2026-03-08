@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <!-- x/pat app icon — "x/" monogram — amber x, teal slash -->
+  <!-- x/pat app icon — "x/" monogram — amber x, teal slash — centered -->
   <rect width="512" height="512" rx="112" fill="#1C1C1E"/>
-  <text x="105" y="360" font-family="Georgia, 'Times New Roman', serif" font-size="280" font-weight="400" fill="#E8803A" letter-spacing="-20">x</text>
-  <text x="275" y="360" font-family="Georgia, 'Times New Roman', serif" font-size="280" font-weight="400" fill="#2EC4A0" letter-spacing="-20">/</text>
+  <text x="168" y="340" text-anchor="middle" dominant-baseline="central" font-family="Georgia, 'Times New Roman', serif" font-size="260" font-weight="400" fill="#E8803A">x</text>
+  <text x="338" y="326" text-anchor="middle" dominant-baseline="central" font-family="Georgia, 'Times New Roman', serif" font-size="260" font-weight="400" fill="#2EC4A0">/</text>
 </svg>

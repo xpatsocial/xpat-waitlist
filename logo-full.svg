@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120">
-  <!-- x/pat full wordmark — dark mode — amber x, teal slash, light pat -->
-  <text x="10" y="95" font-family="Georgia, 'Times New Roman', serif" font-size="110" font-weight="400" fill="#E8803A" letter-spacing="-4">x</text>
-  <text x="80" y="95" font-family="Georgia, 'Times New Roman', serif" font-size="110" font-weight="400" fill="#2EC4A0" letter-spacing="-4">/</text>
-  <text x="130" y="95" font-family="Georgia, 'Times New Roman', serif" font-size="110" font-weight="400" fill="#F5F5F5" letter-spacing="-4">pat</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 120">
+  <!-- x/pat full wordmark — dark mode — amber x, teal slash, light pat — centered -->
+  <text x="5" y="95" font-family="Georgia, 'Times New Roman', serif" font-size="110" font-weight="400" fill="#E8803A">x</text>
+  <text x="68" y="95" font-family="Georgia, 'Times New Roman', serif" font-size="110" font-weight="400" fill="#2EC4A0">/</text>
+  <text x="108" y="95" font-family="Georgia, 'Times New Roman', serif" font-size="110" font-weight="400" fill="#F5F5F5" letter-spacing="-2">pat</text>
 </svg>
