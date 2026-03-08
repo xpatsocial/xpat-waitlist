@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display');
+    .brand { font-family: 'DM Serif Display', serif; font-size: 64px; fill: #2EC4A0; }
+  </style>
+  <text x="10" y="62" class="brand">x/pat</text>
+</svg>
