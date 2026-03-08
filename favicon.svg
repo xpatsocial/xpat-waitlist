@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <rect width="32" height="32" rx="7" fill="#1C1C1E"/>
-  <text x="10" y="22" text-anchor="middle" dominant-baseline="central" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#E8803A">x</text>
-  <text x="22" y="21" text-anchor="middle" dominant-baseline="central" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#2EC4A0">/</text>
+  <text x="16" y="21" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="400" letter-spacing="-1">
+    <tspan fill="#E8803A">x</tspan><tspan fill="#2EC4A0">/</tspan>
+  </text>
 </svg>

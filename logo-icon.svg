@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <!-- x/pat app icon — "x/" monogram — amber x, teal slash — centered -->
+  <!-- x/pat app icon — "x/" monogram — centered, tight kerning -->
   <rect width="512" height="512" rx="112" fill="#1C1C1E"/>
-  <text x="168" y="340" text-anchor="middle" dominant-baseline="central" font-family="Georgia, 'Times New Roman', serif" font-size="260" font-weight="400" fill="#E8803A">x</text>
-  <text x="338" y="326" text-anchor="middle" dominant-baseline="central" font-family="Georgia, 'Times New Roman', serif" font-size="260" font-weight="400" fill="#2EC4A0">/</text>
+  <text x="256" y="330" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="320" font-weight="400" letter-spacing="-15">
+    <tspan fill="#E8803A">x</tspan><tspan fill="#2EC4A0">/</tspan>
+  </text>
 </svg>
