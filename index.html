@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>x/pat — explore everywhere. belong anywhere.</title>
+<meta name="description" content="x/pat is the community-powered travel platform built for digital nomads. Discover spots, connect with nomads, explore the world. Free forever.">
+<meta property="og:title" content="x/pat — explore everywhere. belong anywhere.">
+<meta property="og:description" content="The travel app built by nomads, for nomads. Join the waitlist.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://xpat.social">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://xpat.social">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #2EC4A0;
+    --teal-glow: rgba(46, 196, 160, 0.3);
+    --amber: #E8803A;
+    --bg: #1C1C1E;
+    --bg2: #2C2C2E;
+    --bg3: #3A3A3C;
+    --text: #F5F5F5;
+    --text2: #A1A1A6;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Space Mono', monospace;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4 { font-family: 'DM Serif Display', serif; font-weight: 400; }
+  a { color: var(--teal); text-decoration: none; }
+
+  /* Hero */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 24px;
+    position: relative;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--teal-glow) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: pulse 4s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 0.3; transform: translateX(-50%) scale(1); }
+    50% { opacity: 0.6; transform: translateX(-50%) scale(1.1); }
+  }
+  .globe {
+    font-size: 100px;
+    margin-bottom: 24px;
+    animation: spin 20s linear infinite;
+    position: relative;
+    z-index: 1;
+  }
+  @keyframes spin {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+  }
+  .brand {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(56px, 12vw, 96px);
+    color: var(--teal);
+    letter-spacing: -2px;
+    position: relative;
+    z-index: 1;
+  }
+  .tagline {
+    font-size: clamp(16px, 3vw, 22px);
+    color: var(--text2);
+    margin-top: 12px;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+  }
+  .tagline em {
+    color: var(--text);
+    font-style: normal;
+  }
+
+  /* Waitlist Form */
+  .waitlist-form {
+    margin-top: 48px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    max-width: 520px;
+    width: 100%;
+  }
+  .waitlist-form input {
+    flex: 1;
+    min-width: 240px;
+    padding: 16px 20px;
+    border-radius: 12px;
+    border: 1px solid var(--bg3);
+    background: var(--bg2);
+    color: var(--text);
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  .waitlist-form input:focus {
+    border-color: var(--teal);
+  }
+  .waitlist-form input::placeholder {
+    color: var(--text2);
+  }
+  .waitlist-form button {
+    padding: 16px 32px;
+    border-radius: 12px;
+    border: none;
+    background: var(--teal);
+    color: var(--bg);
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+  }
+  .waitlist-form button:hover {
+    background: #25a384;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--teal-glow);
+  }
+  .waitlist-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+  .form-msg {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 8px;
+    min-height: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  .form-msg.success { color: var(--teal); }
+  .form-msg.error { color: var(--amber); }
+
+  .waitlist-count {
+    margin-top: 24px;
+    font-size: 13px;
+    color: var(--text2);
+    position: relative;
+    z-index: 1;
+  }
+  .waitlist-count span { color: var(--teal); font-weight: 700; }
+
+  /* Features */
+  .features {
+    padding: 80px 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .features h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 56px;
+    color: var(--teal);
+  }
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .feature-card {
+    background: var(--bg2);
+    border-radius: 12px;
+    padding: 28px;
+    border: 1px solid var(--bg3);
+    transition: all 0.3s;
+  }
+  .feature-card:hover {
+    border-color: var(--teal);
+    transform: translateY(-4px);
+  }
+  .feature-icon { font-size: 32px; margin-bottom: 16px; }
+  .feature-card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .feature-card p {
+    font-size: 13px;
+    color: var(--text2);
+    line-height: 1.7;
+  }
+
+  /* How it works */
+  .how {
+    padding: 80px 24px;
+    background: var(--bg2);
+  }
+  .how-inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .how h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 48px;
+    color: var(--teal);
+  }
+  .step {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 36px;
+    align-items: flex-start;
+  }
+  .step-num {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--teal);
+    color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .step h4 { font-size: 18px; margin-bottom: 4px; }
+  .step p { font-size: 13px; color: var(--text2); line-height: 1.7; }
+
+  /* Free forever banner */
+  .free-banner {
+    padding: 60px 24px;
+    text-align: center;
+  }
+  .free-banner h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+  .free-banner .price {
+    font-size: 64px;
+    color: var(--teal);
+    font-family: 'DM Serif Display', serif;
+  }
+  .free-banner p {
+    color: var(--text2);
+    font-size: 14px;
+    margin-top: 8px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+  }
+
+  /* CTA */
+  .cta {
+    padding: 80px 24px;
+    text-align: center;
+    position: relative;
+  }
+  .cta::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(232, 128, 58, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .cta h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+  }
+  .cta p {
+    color: var(--text2);
+    font-size: 14px;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Footer */
+  footer {
+    padding: 40px 24px;
+    text-align: center;
+    border-top: 1px solid var(--bg3);
+    font-size: 12px;
+    color: var(--text2);
+  }
+  footer a { color: var(--teal); }
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  /* Mobile */
+  @media (max-width: 480px) {
+    .waitlist-form { flex-direction: column; }
+    .waitlist-form input { min-width: 100%; }
+    .waitlist-form button { width: 100%; }
+    .step { flex-direction: column; gap: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="globe">🌍</div>
+  <h1 class="brand">x/pat</h1>
+  <p class="tagline">explore everywhere. <em>belong anywhere.</em></p>
+
+  <form class="waitlist-form" id="waitlistForm">
+    <input type="email" id="emailInput" placeholder="your@email.com" required autocomplete="email">
+    <button type="submit" id="submitBtn">Join the Waitlist</button>
+  </form>
+  <div class="form-msg" id="formMsg"></div>
+  <div class="waitlist-count">
+    <span id="count">0</span> nomads already waiting
+  </div>
+</section>
+
+<!-- Features -->
+<section class="features">
+  <h2>Built for the way you travel</h2>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🗺️</div>
+      <h3>Map-First Explore</h3>
+      <p>Discover cafes, coworking spaces, coliving, and hidden gems — all on an interactive map with community and Google Places layers.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">👥</div>
+      <h3>Nomad Community</h3>
+      <p>Connect with other digital nomads in your city. Location-based group chat means you're never alone in a new place.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📍</div>
+      <h3>Community Spots</h3>
+      <p>Crowd-sourced recommendations from real nomads. Upvote the best spots, leave reviews, track where you've been.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🌍</div>
+      <h3>Interactive Globe</h3>
+      <p>Start your journey from a 3D globe. Spin, explore, and dive into cities across the world.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🏷️</div>
+      <h3>Smart Categories</h3>
+      <p>Filter by what matters: cafes with wifi, affordable coliving, unique experiences, and more — tagged by the community.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">💸</div>
+      <h3>Free. Forever.</h3>
+      <p>No premium tier. No paywall. No subscriptions. x/pat is and always will be completely free to use.</p>
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="how">
+  <div class="how-inner">
+    <h2>How it works</h2>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div>
+        <h4>Explore the map</h4>
+        <p>Open x/pat and see community-sourced spots and Google Places around you — or anywhere in the world. Filter by category to find exactly what you need.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div>
+        <h4>Connect with nomads</h4>
+        <p>Join city-based group chats to meet fellow nomads. See who's in your area, what spots they recommend, and build your community.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div>
+        <h4>Contribute & grow</h4>
+        <p>Add your own spots, upvote the best finds, and help build the most comprehensive nomad-powered travel database in the world.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Free forever -->
+<section class="free-banner">
+  <h2>The price?</h2>
+  <div class="price">$0</div>
+  <p>x/pat is free for life. No premium tier. No hidden fees. We're building this for the community, not for investors.</p>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Ready to explore?</h2>
+  <p>Be the first to know when x/pat launches. Early members help shape the product.</p>
+  <form class="waitlist-form" id="waitlistForm2">
+    <input type="email" id="emailInput2" placeholder="your@email.com" required autocomplete="email">
+    <button type="submit">Join the Waitlist</button>
+  </form>
+  <div class="form-msg" id="formMsg2"></div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-links">
+    <span>x/pat</span>
+    <a href="mailto:alex@xpat.social">Contact</a>
+  </div>
+  <p>&copy; 2026 Aych Holdings LLC. All rights reserved.</p>
+</footer>
+
+<script>
+const SUPABASE_URL = 'https://diiqponrvrcpwoerenwz.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRpaXFwb25ydnJjcHdvZXJlbnd6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI5ODI4ODMsImV4cCI6MjA4ODU1ODg4M30.3rkaz6nZC_2_3UsHQNd07PnFoBkypBwstBeH7lr6wPQ';
+
+async function getCount() {
+  try {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/waitlist?select=id`, {
+      headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}`, 'Prefer': 'count=exact' }
+    });
+    const count = res.headers.get('content-range')?.split('/')[1] || '0';
+    document.getElementById('count').textContent = count;
+  } catch(e) {}
+}
+
+async function submitEmail(email, msgEl, btnEl) {
+  btnEl.disabled = true;
+  btnEl.textContent = 'Joining...';
+  msgEl.className = 'form-msg';
+  msgEl.textContent = '';
+
+  try {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/waitlist`, {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_KEY,
+        'Authorization': `Bearer ${SUPABASE_KEY}`,
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({ email: email.toLowerCase().trim() })
+    });
+
+    if (res.ok) {
+      msgEl.className = 'form-msg success';
+      msgEl.textContent = "You're on the list! We'll be in touch soon.";
+      btnEl.textContent = 'You\'re In!';
+      getCount();
+    } else if (res.status === 409) {
+      msgEl.className = 'form-msg success';
+      msgEl.textContent = "You're already on the list! We'll be in touch soon.";
+      btnEl.textContent = 'Already Joined';
+    } else {
+      throw new Error('Failed');
+    }
+  } catch(e) {
+    msgEl.className = 'form-msg error';
+    msgEl.textContent = 'Something went wrong. Try again.';
+    btnEl.disabled = false;
+    btnEl.textContent = 'Join the Waitlist';
+  }
+}
+
+document.getElementById('waitlistForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  submitEmail(
+    document.getElementById('emailInput').value,
+    document.getElementById('formMsg'),
+    document.querySelector('#waitlistForm button')
+  );
+});
+
+document.getElementById('waitlistForm2').addEventListener('submit', (e) => {
+  e.preventDefault();
+  submitEmail(
+    document.getElementById('emailInput2').value,
+    document.getElementById('formMsg2'),
+    document.querySelector('#waitlistForm2 button')
+  );
+});
+
+getCount();
+</script>
+</body>
+</html>
