@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120">
-  <!-- x/pat full wordmark — dark mode (light "pat" for dark backgrounds) -->
+  <!-- x/pat full wordmark — light mode (dark "pat" for light backgrounds) -->
   <text x="10" y="95" font-family="Georgia, 'Times New Roman', serif" font-size="110" font-weight="400" fill="#2EC4A0" letter-spacing="-4">x</text>
   <text x="80" y="95" font-family="Georgia, 'Times New Roman', serif" font-size="110" font-weight="400" fill="#E8803A" letter-spacing="-4">/</text>
-  <text x="130" y="95" font-family="Georgia, 'Times New Roman', serif" font-size="110" font-weight="400" fill="#F5F5F5" letter-spacing="-4">pat</text>
+  <text x="130" y="95" font-family="Georgia, 'Times New Roman', serif" font-size="110" font-weight="400" fill="#1C1C1E" letter-spacing="-4">pat</text>
 </svg>
