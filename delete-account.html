@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Account — x/pat</title>
+<meta name="description" content="Learn how to delete your x/pat account. Account deletion is available in the app or by email request.">
+<meta property="og:title" content="Delete Account — x/pat">
+<meta property="og:description" content="Learn how to delete your x/pat account.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://xpat.social/delete-account">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #2EC4A0;
+    --teal-glow: rgba(46, 196, 160, 0.3);
+    --amber: #E8803A;
+    --bg: #1C1C1E;
+    --bg2: #2C2C2E;
+    --bg3: #3A3A3C;
+    --text: #F5F5F5;
+    --text2: #A1A1A6;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Space Mono', monospace;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+  }
+  h1, h2, h3 { font-family: 'DM Serif Display', serif; font-weight: 400; }
+  a { color: var(--teal); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .container {
+    max-width: 560px;
+    width: 100%;
+  }
+  .logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    color: var(--teal);
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .subtitle {
+    color: var(--text2);
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .card {
+    background: var(--bg2);
+    border: 1px solid var(--bg3);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 20px;
+  }
+  .card h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: var(--text);
+  }
+  .card p, .card ol {
+    color: var(--text2);
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  .card ol {
+    padding-left: 20px;
+    margin-top: 8px;
+  }
+  .card ol li {
+    margin-bottom: 6px;
+  }
+  .card .step-highlight {
+    color: var(--teal);
+    font-weight: 700;
+  }
+  .email-link {
+    display: inline-block;
+    color: var(--teal);
+    font-weight: 700;
+  }
+  .grace-note {
+    background: rgba(232, 128, 58, 0.1);
+    border: 1px solid rgba(232, 128, 58, 0.25);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 32px;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--text2);
+  }
+  .grace-note strong {
+    color: var(--amber);
+  }
+  .back-link {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">x/pat</div>
+    <h1>Delete Your Account</h1>
+    <p class="subtitle">We're sorry to see you go. Here's how to delete your x/pat account and all associated data.</p>
+
+    <div class="card">
+      <h2>Option 1: In the App</h2>
+      <ol>
+        <li>Open the <span class="step-highlight">x/pat</span> app</li>
+        <li>Go to <span class="step-highlight">Profile</span></li>
+        <li>Tap <span class="step-highlight">Settings</span></li>
+        <li>Tap <span class="step-highlight">Delete Account</span></li>
+        <li>Confirm the deletion</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>Option 2: By Email</h2>
+      <p>Send an email to <a href="mailto:alex@xpat.social" class="email-link">alex@xpat.social</a> from the email address associated with your account, and we'll process your deletion request.</p>
+    </div>
+
+    <div class="grace-note">
+      <strong>7-day grace period:</strong> After requesting deletion, your account will be deactivated immediately but not permanently removed for 7 days. During this period you can sign back in to cancel the deletion. After 7 days, all your data will be permanently and irreversibly deleted.
+    </div>
+
+    <div class="back-link">
+      <a href="https://xpat.social">&larr; Back to xpat.social</a>
+    </div>
+  </div>
+</body>
+</html>
