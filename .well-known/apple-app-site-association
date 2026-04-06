@@ -1,0 +1,22 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "9FWM9VKHT8.com.aychholdings.xpat",
+        "paths": [
+          "/spot/*",
+          "/profile/*",
+          "/feed",
+          "/feed/*",
+          "/invite/*"
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "9FWM9VKHT8.com.aychholdings.xpat"
+    ]
+  }
+}
