@@ -3,7 +3,7 @@
     "apps": [],
     "details": [
       {
-        "appID": "9FWM9VKHT8.com.aycholdings.xpat",
+        "appID": "9FWM9VKHT8.com.aychholdings.xpat",
         "paths": [
           "/spot/*",
           "/profile/*",
@@ -16,7 +16,7 @@
   },
   "webcredentials": {
     "apps": [
-      "9FWM9VKHT8.com.aycholdings.xpat"
+      "9FWM9VKHT8.com.aychholdings.xpat"
     ]
   }
 }
