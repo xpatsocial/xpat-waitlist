@@ -3,146 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Delete Account — x/pat</title>
-<meta name="description" content="Learn how to delete your x/pat account. Account deletion is available in the app or by email request.">
-<meta property="og:title" content="Delete Account — x/pat">
-<meta property="og:description" content="Learn how to delete your x/pat account.">
+<title>Delete Your Account — x/pat</title>
+<meta name="description" content="How to delete your x/pat account and data, in the app or by email.">
+<meta property="og:title" content="Delete Your Account — x/pat">
+<meta property="og:description" content="How to delete your x/pat account and data, in the app or by email.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://xpat.social/delete-account">
+<link rel="canonical" href="https://xpat.social/delete-account">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --teal: #2EC4A0;
-    --teal-glow: rgba(46, 196, 160, 0.3);
-    --amber: #E8803A;
-    --bg: #1C1C1E;
-    --bg2: #2C2C2E;
-    --bg3: #3A3A3C;
-    --text: #F5F5F5;
-    --text2: #A1A1A6;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: 'Space Mono', monospace;
-    background: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 24px;
-  }
-  h1, h2, h3 { font-family: 'DM Serif Display', serif; font-weight: 400; }
-  a { color: var(--teal); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  .container {
-    max-width: 560px;
-    width: 100%;
-  }
-  .logo {
-    font-family: 'DM Serif Display', serif;
-    font-size: 28px;
-    color: var(--teal);
-    margin-bottom: 40px;
-    text-align: center;
-  }
-  h1 {
-    font-size: 32px;
-    margin-bottom: 16px;
-    text-align: center;
-  }
-  .subtitle {
-    color: var(--text2);
-    font-size: 14px;
-    line-height: 1.7;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  .card {
-    background: var(--bg2);
-    border: 1px solid var(--bg3);
-    border-radius: 12px;
-    padding: 28px;
-    margin-bottom: 20px;
-  }
-  .card h2 {
-    font-size: 20px;
-    margin-bottom: 12px;
-    color: var(--text);
-  }
-  .card p, .card ol {
-    color: var(--text2);
-    font-size: 13px;
-    line-height: 1.8;
-  }
-  .card ol {
-    padding-left: 20px;
-    margin-top: 8px;
-  }
-  .card ol li {
-    margin-bottom: 6px;
-  }
-  .card .step-highlight {
-    color: var(--teal);
-    font-weight: 700;
-  }
-  .email-link {
-    display: inline-block;
-    color: var(--teal);
-    font-weight: 700;
-  }
-  .grace-note {
-    background: rgba(232, 128, 58, 0.1);
-    border: 1px solid rgba(232, 128, 58, 0.25);
-    border-radius: 8px;
-    padding: 16px 20px;
-    margin-bottom: 32px;
-    font-size: 13px;
-    line-height: 1.7;
-    color: var(--text2);
-  }
-  .grace-note strong {
-    color: var(--amber);
-  }
-  .back-link {
-    text-align: center;
-    margin-top: 12px;
-    font-size: 13px;
-  }
+  :root { --teal:#2EC4A0; --amber:#E8803A; --bg:#1C1C1E; --bg2:#2C2C2E; --bg3:#3A3A3C; --text:#F5F5F5; --text2:#A1A1A6; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Space Mono',monospace; background:var(--bg); color:var(--text); padding:40px 16px 64px; }
+  h1,h2,h3 { font-family:'DM Serif Display',serif; font-weight:400; }
+  a { color:var(--teal); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .container { max-width:720px; margin:0 auto; }
+  .logo { font-family:'DM Serif Display',serif; font-size:28px; color:var(--teal); margin-bottom:32px; text-align:center; display:block; }
+  h1 { font-size:34px; margin-bottom:8px; text-align:center; }
+  .updated { color:var(--text2); font-size:11px; letter-spacing:1px; text-transform:uppercase; text-align:center; margin-bottom:32px; }
+  .intro { color:var(--text2); font-size:14px; line-height:1.8; margin-bottom:28px; }
+  nav.toc { background:var(--bg2); border:1px solid var(--bg3); border-radius:12px; padding:12px 20px; margin-bottom:28px; font-size:14px; }
+  nav.toc li a { display:inline-block; padding:10px 0; }
+  nav.toc ol { padding-left:20px; }
+  section { background:var(--bg2); border:1px solid var(--bg3); border-radius:12px; padding:24px; margin-bottom:16px; scroll-margin-top:16px; }
+  section h2 { font-size:21px; color:var(--teal); margin-bottom:12px; }
+  section h3 { font-size:16px; color:var(--text); margin:16px 0 6px; }
+  section p, section li, td, th { color:var(--text2); font-size:13px; line-height:1.8; }
+  section p + p { margin-top:10px; }
+  section ul, section ol { padding-left:20px; margin-top:6px; }
+  section li { margin-bottom:4px; }
+  strong { color:var(--text); }
+  .table-wrap { overflow-x:auto; margin-top:8px; }
+  table { border-collapse:collapse; width:100%; min-width:480px; }
+  th, td { text-align:left; vertical-align:top; padding:8px 10px; border-bottom:1px solid var(--bg3); }
+  th { color:var(--text); font-weight:700; }
+  .note { background:rgba(232,128,58,0.1); border:1px solid rgba(232,128,58,0.25); border-radius:8px; padding:14px 18px; margin-top:12px; font-size:13px; line-height:1.7; color:var(--text2); }
+  .note strong { color:var(--amber); }
+  footer { text-align:center; margin-top:40px; font-size:13px; color:var(--text2); line-height:1.6; }
+  footer .links { display:flex; flex-wrap:wrap; justify-content:center; gap:0 4px; margin-bottom:8px; }
+  footer a { display:inline-block; padding:12px 10px; }
 </style>
 </head>
 <body>
-  <div class="container">
-    <div class="logo">x/pat</div>
-    <h1>Delete Your Account</h1>
-    <p class="subtitle">We're sorry to see you go. Here's how to delete your x/pat account and all associated data.</p>
+<div class="container">
+  <a class="logo" href="https://xpat.social">x/pat</a>
+  <h1>Delete Your Account</h1>
+  <p class="updated">Last updated: October 20, 2026</p>
+  <p class="intro">You can delete your x/pat account and its data at any time, in the app or by email. This page is for the x/pat app (developer: x/pat, xpat.social) on the App Store and Google Play.</p>
+  <section id="in-app">
+    <h2>Option 1: in the app</h2>
 
-    <div class="card">
-      <h2>Option 1: In the App</h2>
-      <ol>
-        <li>Open the <span class="step-highlight">x/pat</span> app</li>
-        <li>Go to <span class="step-highlight">Profile</span></li>
-        <li>Tap <span class="step-highlight">Settings</span></li>
-        <li>Tap <span class="step-highlight">Delete Account</span></li>
-        <li>Confirm the deletion</li>
-      </ol>
-    </div>
+    <ol>
+      <li>Open <strong>x/pat</strong> and sign in.</li>
+      <li>Go to <strong>Profile</strong> and tap the <strong>Settings</strong> (gear) icon.</li>
+      <li>Scroll to the bottom and tap <strong>Delete Account</strong>.</li>
+      <li>Confirm twice. Your account is deleted straight away.</li>
+    </ol>
+  </section>
+  <section id="email">
+    <h2>Option 2: by email (no app needed)</h2>
 
-    <div class="card">
-      <h2>Option 2: By Email</h2>
-      <p>Send an email to <a href="mailto:alex@xpat.social" class="email-link">alex@xpat.social</a> from the email address associated with your account, and we'll process your deletion request.</p>
-    </div>
+    <p>Email <a href="mailto:hello@xpat.social?subject=Delete%20my%20x%2Fpat%20account"><strong>hello@xpat.social</strong></a> from the email address you use for x/pat, with the subject "Delete my account". You don't need to reinstall the app. We may reply to confirm it's really you, then delete the account within 7 days and email you when it's done.</p>
+  </section>
+  <section id="what-happens">
+    <h2>What gets deleted and what we keep</h2>
 
-    <div class="grace-note">
-      <strong>7-day grace period:</strong> After requesting deletion, your account will be deactivated immediately but not permanently removed for 7 days. During this period you can sign back in to cancel the deletion. After 7 days, all your data will be permanently and irreversibly deleted.
-    </div>
+    <p>Deleting in the app is <strong>immediate and permanent</strong> (it can't be undone). We delete:</p>
+    <ul>
+      <li>Your account, email, date of birth and sign-in details</li>
+      <li>Your profile and photos</li>
+      <li>Spots, posts, comments, votes, saves, check-ins, events, RSVPs and travel plans you created</li>
+      <li>Your city-chat and direct messages</li>
+      <li>Your city / online status, connections, XP and streaks, and push tokens</li>
+    </ul>
+    <p>We may keep, for up to 1 year and only for safety and legal reasons: reports other users filed about content (with your account details removed) and moderation records, and anything we must preserve by law (for example, material reported to NCMEC). Analytics data (up to 12 months) and crash reports (up to 90 days) expire on their own schedule. Backups are overwritten on a rolling basis.</p>
+    <p>Want only some data deleted (for example a post or photo)? Delete it in the app, or email us. Want a copy first? Use <strong>Settings &rarr; Export My Data</strong> before deleting.</p>
+  </section>
 
-    <div class="back-link">
-      <a href="https://xpat.social">&larr; Back to xpat.social</a>
-    </div>
-  </div>
+  <footer>
+    <div class="links"><a href="privacy-policy">Privacy</a><a href="terms-of-service">Terms</a><a href="child-safety">Child Safety</a><a href="support">Support</a><a href="mailto:hello@xpat.social">Contact</a><a href="delete-account">Delete account</a></div>
+    <div>&copy; 2026 x/pat &middot; <a href="https://xpat.social">xpat.social</a></div>
+  </footer>
+</div>
 </body>
 </html>
