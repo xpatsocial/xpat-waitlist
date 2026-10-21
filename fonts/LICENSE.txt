@@ -1,0 +1,7 @@
+Fonts in this folder are licensed under the SIL Open Font License, Version 1.1
+(https://openfontlicense.org). They are unmodified copies from Google Fonts.
+
+- DM Serif Display: Copyright The DM Serif Display Project Authors
+  (https://github.com/googlefonts/dm-fonts)
+- Space Mono: Copyright Google Inc. / Colophon Foundry
+  (https://github.com/googlefonts/spacemono)

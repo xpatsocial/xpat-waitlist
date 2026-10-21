@@ -1,0 +1,5 @@
+/* Self-hosted so visitors' browsers don't contact Google Fonts (no IP sent to a
+   third party). Same files the app ships in xpat-app/assets/fonts. */
+@font-face { font-family:'DM Serif Display'; font-style:normal; font-weight:400; font-display:swap; src:url('DMSerifDisplay-Regular.ttf') format('truetype'); }
+@font-face { font-family:'Space Mono'; font-style:normal; font-weight:400; font-display:swap; src:url('SpaceMono-Regular.ttf') format('truetype'); }
+@font-face { font-family:'Space Mono'; font-style:normal; font-weight:700; font-display:swap; src:url('SpaceMono-Bold.ttf') format('truetype'); }
